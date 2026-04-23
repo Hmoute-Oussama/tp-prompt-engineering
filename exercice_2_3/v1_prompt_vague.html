@@ -1,0 +1,55 @@
+<!--
+Exercice 2.3 - Version 1 : Prompt Vague
+Prompt utilisé : "Fais-moi une calculatrice en HTML."
+
+Résultat généré par l'IA (basique, peu stylisé, fonctionnalités minimales) :
+-->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculatrice</title>
+</head>
+<body>
+    <h1>Calculatrice</h1>
+    <input type="text" id="result" disabled>
+    <br><br>
+    <button onclick="addToDisplay('7')">7</button>
+    <button onclick="addToDisplay('8')">8</button>
+    <button onclick="addToDisplay('9')">9</button>
+    <button onclick="addToDisplay('/')">/</button>
+    <br>
+    <button onclick="addToDisplay('4')">4</button>
+    <button onclick="addToDisplay('5')">5</button>
+    <button onclick="addToDisplay('6')">6</button>
+    <button onclick="addToDisplay('*')">*</button>
+    <br>
+    <button onclick="addToDisplay('1')">1</button>
+    <button onclick="addToDisplay('2')">2</button>
+    <button onclick="addToDisplay('3')">3</button>
+    <button onclick="addToDisplay('-')">-</button>
+    <br>
+    <button onclick="addToDisplay('0')">0</button>
+    <button onclick="addToDisplay('.')">.</button>
+    <button onclick="computeResult()">=</button>
+    <button onclick="addToDisplay('+')">+</button>
+    <br>
+    <button onclick="clearDisplay()">C</button>
+
+    <script>
+        function addToDisplay(value) {
+            document.getElementById('result').value += value;
+        }
+        function clearDisplay() {
+            document.getElementById('result').value = '';
+        }
+        function computeResult() {
+            try {
+                document.getElementById('result').value = eval(document.getElementById('result').value);
+            } catch (e) {
+                document.getElementById('result').value = 'Erreur';
+            }
+        }
+    </script>
+</body>
+</html>
