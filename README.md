@@ -20,7 +20,16 @@
     *   **Vérification nécessaire :** Le code généré nécessite toujours une revue humaine et des tests unitaires pour garantir la validité logique.
 5.  **Cas d'utilisation typiques :** Génération de boilerplate (code répétitif), refactorisation de fonctions isolées, écriture de tests unitaires et documentation automatique.
 
----
+
+Questions du Prompt Vague :
+Q1. La fonction est-elle nommée ?
+Non, le prompt vague ne précise pas de nom. L'IA peut nommer la fonction n'importe comment (calc, operation, compute...) selon son choix.
+Q2. Quelles opérations sont prises en charge ?
+Non précisé. L'IA décide elle-même quelles opérations inclure, peut-être seulement + et -, ou toutes les quatre.
+Q3. Y a-t-il une gestion des erreurs ?
+Probablement non ou minimale, car le prompt n'en parle pas.
+Q4. Des commentaires ?
+Probablement non, rien n'est demandé à ce sujet.
 
 ## Partie 2 – Génération de code avec IA
 
@@ -35,6 +44,8 @@
 1.  **Impact du Prompt Engineering :** La **spécificité** a eu le plus grand impact sur la fonctionnalité, tandis que le **persona** a amélioré la structure et la maintenabilité.
 2.  **Comportements inattendus :** Dans la version vague, l'IA n'a pas inclus de mécanisme pour arrêter une opération invalide (elle ne faisait rien).
 3.  **Coût vs Qualité :** Un prompt vague demande 2 à 3 itérations manuelles pour corriger le code (plus coûteux), alors qu'un prompt spécifique produit un code prêt pour la production dès le premier essai.
+
+   
 
 ### Exercice 2.2 : `format_product_code`
 *   **Zero-Shot :** L'IA a parfois confondu l'indice d'insertion (split à 3/7 au lieu de 3/6 pour obtenir le format de l'exemple).
