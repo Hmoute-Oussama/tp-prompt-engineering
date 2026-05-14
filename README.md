@@ -1,6 +1,6 @@
 # Rapport de TP : Ingénierie de Prompt appliquée au Développement
 
-**Étudiant :** [Votre Nom/Groupe]  
+**Étudiant :** Oussama Hmoute 
 **Cours :** Prof. Imane Allaouzi  
 **Sujet :** Ingénierie de prompt appliquée à la génération de code avec l’IA
 
